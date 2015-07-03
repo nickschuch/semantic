@@ -1,0 +1,54 @@
+{
+	"version": 0,
+	"dependencies": [
+		{
+			"importpath": "github.com/Unknwon/cae",
+			"repository": "https://github.com/Unknwon/cae",
+			"revision": "2e70a1351ba7842f0b4e58ef2f87302061ab2ced",
+			"branch": "master"
+		},
+		{
+			"importpath": "github.com/Unknwon/com",
+			"repository": "https://github.com/Unknwon/com",
+			"revision": "188d690b1aea28bf00ba76983aa285b1d322e3dd",
+			"branch": "master"
+		},
+		{
+			"importpath": "github.com/alecthomas/kingpin",
+			"repository": "https://github.com/alecthomas/kingpin",
+			"revision": "2726594e641fa0435cd9dc5134a7cfaac296d535",
+			"branch": "master"
+		},
+		{
+			"importpath": "github.com/alecthomas/template",
+			"repository": "https://github.com/alecthomas/template",
+			"revision": "b867cc6ab45cece8143cfcc6fc9c77cf3f2c23c0",
+			"branch": "master"
+		},
+		{
+			"importpath": "github.com/alecthomas/units",
+			"repository": "https://github.com/alecthomas/units",
+			"revision": "6b4e7dc5e3143b85ea77909c72caf89416fc2915",
+			"branch": "master"
+		},
+		{
+			"importpath": "github.com/gogits/git",
+			"repository": "https://github.com/gogits/git",
+			"revision": "20693f7c6e32105ced8025725afd207d6620cab8",
+			"branch": "master"
+		},
+		{
+			"importpath": "github.com/stretchr/testify/assert",
+			"repository": "https://github.com/stretchr/testify",
+			"revision": "089c7181b8c728499929ff09b62d3fdd8df8adff",
+			"branch": "master",
+			"path": "/assert"
+		},
+		{
+			"importpath": "gopkg.in/alecthomas/kingpin.v2",
+			"repository": "https://gopkg.in/alecthomas/kingpin.v2",
+			"revision": "e1f37920c1d0ced4d1c92f9526a2a433183f02e9",
+			"branch": "master"
+		}
+	]
+}
