@@ -26,13 +26,6 @@ func main() {
 		os.Exit(1)
 	}
 
-	// Unpacking ensures we have tags available.
-	err = git.UnpackRefs(".git")
-	if err != nil {
-		fmt.Println("Cannot unpack refs.")
-		os.Exit(1)
-	}
-
 	// Now we get a list of all the tags.
 	tags, err := repo.GetTags()
 	if err != nil {
