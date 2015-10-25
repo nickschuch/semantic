@@ -69,7 +69,7 @@ func main() {
 //  * Only semantic versions
 //  * The most recent tag
 func filter(tags []string) (Tag, error) {
-	var latest Tag
+	var tag Tag
 
 	for _, t := range tags {
 		// Convert the string into a Tag object so we can compare.
@@ -80,22 +80,15 @@ func filter(tags []string) (Tag, error) {
 			continue
 		}
 
-		// Strip the dots out so we can compare int's.
-		//  eg. 301 (3.0.1) vs 215 (2.1.5)
-		high, err := TagToInt(latest)
-		if err != nil {
-			continue
+		switch {
+		case tmp.Major >= tag.Major:
+			tag.Major = tmp.Major
+		case tmp.Minor >= tag.Minor:
+			tag.Minor = tmp.Minor
+		case tmp.Patch >= tag.Patch:
+			tag.Patch = tmp.Patch
 		}
-		low, err := TagToInt(tmp)
-		if err != nil {
-			continue
-		}
-		if low < high {
-			continue
-		}
-
-		latest = tmp
 	}
 
-	return latest, nil
+	return tag, nil
 }

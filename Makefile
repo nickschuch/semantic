@@ -3,16 +3,22 @@
 GO=go
 GB=gb
 
-all: test
+all: build-all
 
-build: deps
+build: clean test
 	@echo "Building..."
-	@$(GB) build all
+	env GOOS=linux GOARCH=amd64 $(GB) build
+	mv bin/semantic bin/semantic-linux-amd64
 
-deps:
-	@echo "Installing gb..."
-	@$(GO) get github.com/constabulary/gb/...
+build-all: build
+	@echo "Building others..."
+	env GOOS=linux GOARCH=386 $(GB) build
+	env GOOS=darwin GOARCH=amd64 $(GB) build
+	env GOOS=darwin GOARCH=386 $(GB) build
 
-test: build
+clean:
+	rm -fR pkg bin
+
+test:
 	@echo "Running tests..."
 	@$(GB) test -test.v=true
