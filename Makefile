@@ -3,12 +3,12 @@
 GO=go
 GB=gb
 
-all: build-all
-
 build: clean test
 	@echo "Building..."
 	env GOOS=linux GOARCH=amd64 $(GB) build
 	mv bin/semantic bin/semantic-linux-amd64
+
+all: build-all
 
 build-all: build
 	@echo "Building others..."
